@@ -1,0 +1,16 @@
+{
+    "ports": {
+        "australia": {
+            "filename": "oz_ports/oz_ports.v2.fgb",
+            "crs": "epsg:4326",
+            "driver": "ogr",
+            "layername": "oz_ports",
+            "attr-id": "id",
+            "attr-name": "Port",
+            "attr-feature": [
+                "Port",
+                "FPoE"
+            ]
+        }
+    }
+}

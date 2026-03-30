@@ -1,0 +1,36 @@
+250 m GEBCCO bathymetry, 0.0174532925199433 degrees cell size
+18m depth contour as polygons (for test inside), mostly around the equator/indonesia 
+
+
+All packages here are references into the LFS and need unpacking before building packages!
+DO NOT attempt to commit the unpacked files, that will be blocked by git.
+
+
+
+gebco_w140e170_n5s50 @ 181M:
+
+Upper Left  ( 140.0000000,   5.0000000) 
+Lower Left  ( 140.0000000, -50.0000000) 
+Upper Right ( 170.0000000,   5.0000000) 
+Lower Right ( 170.0000000, -50.0000000) 
+Center      ( 155.0000000, -22.5000000)
+
+
+
+gebco_2022_n23s30_w80e170 @ 524M:
+
+Upper Left  (  80.0000000,  23.0000000) ( 80d 0' 0.00"E, 23d 0' 0.00"N)
+Lower Left  (  80.0000000, -30.0000000) ( 80d 0' 0.00"E, 30d 0' 0.00"S)
+Upper Right ( 170.0000000,  23.0000000) (170d 0' 0.00"E, 23d 0' 0.00"N)
+Lower Right ( 170.0000000, -30.0000000) (170d 0' 0.00"E, 30d 0' 0.00"S)
+Center      ( 125.0000000,  -3.5000000) (125d 0' 0.00"E,  3d30' 0.00"S)
+
+
+gebco_e70w170n23s50 @ 802M:
+
+Upper Left  (  70.0000000,  23.0000000) ( 70d 0' 0.00"E, 23d 0' 0.00"N)
+Lower Left  (  70.0000000, -50.0000000) ( 70d 0' 0.00"E, 50d 0' 0.00"S)
+Upper Right ( 170.0000000,  23.0000000) (170d 0' 0.00"E, 23d 0' 0.00"N)
+Lower Right ( 170.0000000, -50.0000000) (170d 0' 0.00"E, 50d 0' 0.00"S)
+Center      ( 120.0000000, -13.5000000) (120d 0' 0.00"E, 13d30' 0.00"S)
+

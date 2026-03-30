@@ -1,0 +1,61 @@
+{"within": [
+	
+    {
+        "filename": "tasmanagementzones/eastcoastcatchments.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "eastcoastcatchments",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/northcoastcatchments.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "northcoastcatchment",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/sizelimitnorth4326.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "sizelimitnorth",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/specialclosureEPSG4326.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "specialclosure",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/sizelimitsouth4326.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "sizelimitsouth",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/PotLimits4326.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "PotLimits",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+    },
+    {
+        "filename": "tasmanagementzones/SouthEastAMPNetwork.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "SouthEastAMPNetwork",
+        "attr-name":"ABR",
+        "attr-feature":["ABR"]
+      }
+    ]
+    
+}

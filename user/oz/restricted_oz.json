@@ -1,0 +1,13 @@
+{"within": [
+	
+    {
+        "filename": "restricted_oz/oz-protected.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "restricted-zones-australia",
+        "attr-name":"ZONEIUCN",
+        "attr-feature":["ZONEIUCN"]
+    }
+    ]
+    
+}

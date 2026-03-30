@@ -1,0 +1,14 @@
+{"within": [
+	
+    {
+        "filename": "restricted_nsw/nsw-protected.fgb",
+        "crs": "epsg:4326",
+        "driver": "ogr",
+        "layername": "nsw_restricted-zones",
+        "attr-name":"IUCN",
+        "attr-feature":["IUCN","NRS_MPA"]
+    }
+   
+    ]
+    
+}
