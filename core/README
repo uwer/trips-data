@@ -1,4 +1,0 @@
-the various combinations of base data, all will include the base set around Oceania!
-
-All packages here are references into the LFS and need unpacking before building packages!
-DO NOT attempt to commit the unpacked files, that will be blocked by git.
