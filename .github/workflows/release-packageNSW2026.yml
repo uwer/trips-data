@@ -1,0 +1,66 @@
+
+name: Release Generaal OZ Package
+
+on:
+  workflow_dispatch:
+    #push:
+    #branches: [ "main" ]
+    #paths:
+    #  - '.github/workflows/release-package.yml'
+      
+env:
+  RELEASE_VERSION: '2.3'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+        # MATRIX FOR A PURE LIBS ISN'T REALLY NECESSARY
+
+    steps:
+    #- uses: actions/checkout@v4
+    - uses: nschloe/action-cached-lfs-checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Create Package
+      run: |
+        cd core
+        tar -xzf base.tgz
+        cd ../user/bathy
+        tar -xzf gebco_w140e170n5s50.tgz
+        
+        echo "release package ${{ env.RELEASE_VERSION }}"
+        RESULT=$(python3 scripts/process.py 'core/coredataEPSG4326.fgb.v2.3.oz' 'qgis' 'user/bathy/gebco_w140e170n5s50,user/oz/oz_ports,user/oz/restricted_oz,user/nsw/port_nsw,user/nsw/restricted_nsw,user/qld/ports_qld' '2.3' 'NSW-OZ-qgis')
+        STATUS=$?
+        if [ $status -ne 0 ]; then
+          exit 1
+        fi
+        echo "RESULT=${RESULT}" >> $GITHUB_ENV
+        
+
+    - name:  Release Asset
+      #id: upload-release-asset 
+      uses: softprops/action-gh-release@v2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        #upload_url: ${{ steps.create_release.outputs.upload_url }} 
+        # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+        files: |
+          ${{ env.RESULT }}
+        draft: false
+        tag_name: "NSW-DPI"
+        prerelease: false
+        
+        name: ${{ env.RESULT }}
+        overwrite_files: true
+        
+
+        
