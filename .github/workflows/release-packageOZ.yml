@@ -1,5 +1,5 @@
 
-name: Release Generaal OZ Package
+name: Release General OZ Package
 
 on:
   workflow_dispatch:
