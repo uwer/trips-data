@@ -38,13 +38,16 @@ jobs:
         cd ../../
         
         echo "release package ${{ env.RELEASE_VERSION }}"
+        echo "calling process in $(`pwd`)"
+        # args are 'core data' 'context' 'list of user sources' 'version' 'name'
         RESULT=$(python3 scripts/process.py 'core/coredataEPSG4326.fgb.v2.3.oz' 'qgis' 'user/bathy/gebco_w140e170n5s50,user/oz/oz_ports,user/oz/restricted_oz,user/nsw/port_nsw,user/nsw/restricted_nsw,user/qld/ports_qld' '2.3' 'NSW-OZ-qgis')
         STATUS=$?
         if [ $status -ne 0 ]; then
           exit 1
         fi
         echo "RESULT=${RESULT}" >> $GITHUB_ENV
-        
+        echo "result: ${RESULT}"
+        ls -l .
 
     - name:  Release Asset
       #id: upload-release-asset 
