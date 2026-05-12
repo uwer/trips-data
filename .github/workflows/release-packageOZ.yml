@@ -33,6 +33,7 @@ jobs:
       run: |
         cd core
         tar -xzf base.tgz
+        cd ..
         echo "release package ${{ env.RELEASE_VERSION }}"
         RESULT=$(python3 scripts/process.py 'core/coredataEPSG4326.fgb.v2.3.oz' 'trips' 'user/bathy/contour18m2poly,user/bathy/gebco_w140e170n5s50,user/oz/oz_ports,user/oz/restricted_oz' '2.3' 'general-OZ')
         STATUS=$?
