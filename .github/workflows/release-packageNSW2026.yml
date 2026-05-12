@@ -35,6 +35,7 @@ jobs:
         tar -xzf base.tgz
         cd ../user/bathy
         tar -xzf gebco_w140e170n5s50.tgz
+        cd ../../
         
         echo "release package ${{ env.RELEASE_VERSION }}"
         RESULT=$(python3 scripts/process.py 'core/coredataEPSG4326.fgb.v2.3.oz' 'qgis' 'user/bathy/gebco_w140e170n5s50,user/oz/oz_ports,user/oz/restricted_oz,user/nsw/port_nsw,user/nsw/restricted_nsw,user/qld/ports_qld' '2.3' 'NSW-OZ-qgis')
