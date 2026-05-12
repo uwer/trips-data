@@ -1,5 +1,5 @@
 
-name: Release Generaal OZ Package
+name: Release NSW OZ Package
 
 on:
   workflow_dispatch:
